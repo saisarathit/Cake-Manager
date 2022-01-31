@@ -2,7 +2,6 @@ package com.waracle.cakemanager.service;
 
 import com.waracle.cakemanager.entity.Cake;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import com.waracle.cakemanager.repository.CakeRepository;
 
@@ -18,7 +17,11 @@ public class CakeService {
        return ( List<Cake> )cakeRepository.findAll();
     }
 
-    public Cake saveCakes(Cake cake) {
+    public Cake saveCake(Cake cake) {
         return  cakeRepository.save(cake);
+    }
+
+    public List<Cake> saveCakes(List<Cake> cakes) {
+        return  (List<Cake>) cakeRepository.saveAll(cakes);
     }
 }

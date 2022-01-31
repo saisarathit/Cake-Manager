@@ -15,10 +15,11 @@ public class CakeManagerMavenWebappApplication extends WebSecurityConfigurerAdap
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
-				.csrf().disable()
 				.authorizeRequests()
-				.antMatchers("/", "/cakes","/cakes/*", "/h2-console/*").permitAll()
+				.antMatchers("/","/cakes/**","/cake/**", "/h2-console/**").permitAll()
 				.anyRequest()
 				.authenticated().and().oauth2Login();
+		http.headers().frameOptions().sameOrigin();
+		http.csrf().disable();
 	}
 }

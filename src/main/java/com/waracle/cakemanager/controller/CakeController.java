@@ -23,8 +23,8 @@ public class CakeController {
     private CakeService cakeService;
 
     @GetMapping("/")
-    public List<Cake> showCakes(){
-        return cakeService.getCakes();
+    public ResponseEntity<List<Cake>> showCakes(){
+        return  new ResponseEntity<>(cakeService.getCakes(), HttpStatus.OK);
     }
 
     @GetMapping("/cakes")
@@ -45,9 +45,14 @@ public class CakeController {
         return new ResponseEntity<>(isr, respHeaders, HttpStatus.OK);
     }
 
+    @PostMapping("/cake")
+    public ResponseEntity<Cake> saveCake(@RequestBody Cake cake){
+        return new ResponseEntity<>(cakeService.saveCake(cake), HttpStatus.CREATED);
+    }
+
     @PostMapping("/cakes")
-    public Cake saveCakes(@RequestBody Cake cake){
-        return cakeService.saveCakes(cake);
+    public ResponseEntity<List<Cake>> saveCakes(@RequestBody List<Cake> cakes){
+        return new ResponseEntity<>(cakeService.saveCakes(cakes), HttpStatus.CREATED);
     }
 
     @GetMapping("/oauth")
