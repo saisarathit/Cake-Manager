@@ -22,17 +22,17 @@ Note: Please prefix /waracle for all end points. Ex: localhost:<port>/waracle/<e
 
 * / (root url, Get request) : This request list out all cakes information available in current system.
    
-   -> Ex: http://localhost:8083/waracle/
+   -> Ex: http://localhost:8084/waracle/
 * /cakes(Get Request): This request downloads a file with list of cakes currently in the system as JSON data. This has optional query parameter to specify file name.
     * If no query parameter specified then file will be downloaded with default filename as cakes.json
    
-      --> Ex: http://localhost:8083/waracle/cakes
+      --> Ex: http://localhost:8084/waracle/cakes
     * If file name is provided then file will be downloaded with given name
    
-      Ex: http://localhost:8083/waracle/cakes?fileName=cakesList.json
+      Ex: http://localhost:8084/waracle/cakes?fileName=cakesList.json
 * /cake(Post Request): This request is used to store new cake. Cake details should be provided in Request body.
    
-    Ex: http://localhost:8083/waracle/cake
+    Ex: http://localhost:8084/waracle/cake
    
       Request Body
       -----------
@@ -44,25 +44,25 @@ Note: Please prefix /waracle for all end points. Ex: localhost:<port>/waracle/<e
    
    * /cakes(Post Request): This request is used to store new cakes. Cakes list details should be provided in Request body.
       
-       Ex: http://localhost:8083/waracle/cakes
+       Ex: http://localhost:8084/waracle/cakes
    
-      Request Body
-      -----------
-     [ {
-        "title": "BlueBerry Cake",
-        "description": "BlueBerry Cake is made of Blueberries",
-        "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
-      },
-       {
-        "title": "Choco Cake",
-        "description": "Choco Cake is made of Chocolate",
-        "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
-      }]
-   
+         Request Body
+         -----------
+        [ {
+           "title": "BlueBerry Cake",
+           "description": "BlueBerry Cake is made of Blueberries",
+           "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
+         },
+          {
+           "title": "Choco Cake",
+           "description": "Choco Cake is made of Chocolate",
+           "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
+         }]
+
 For all the above urls OAuth is disabled.
 * /oauth : GitHub OAuth functionality is added for this url. Page will be redirected to GitHub login page by requesting this url.
    
-     * Ex:http://localhost:8083/waracle/oauth
+     * Ex:http://localhost:8084/waracle/oauth
 
    
  Docker:
