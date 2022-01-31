@@ -30,9 +30,9 @@ Note: Please prefix /waracle for all end points. Ex: localhost:<port>/waracle/<e
     * If file name is provided then file will be downloaded with given name
    
       Ex: http://localhost:8083/waracle/cakes?fileName=cakesList.json
-* /cakes(Post Request): This request is used to store new cakes. Cake details should be provided in Request body.
+* /cake(Post Request): This request is used to store new cake. Cake details should be provided in Request body.
    
-    Ex: http://localhost:8083/waracle/cakes 
+    Ex: http://localhost:8083/waracle/cake
    
       Request Body
       -----------
@@ -41,7 +41,24 @@ Note: Please prefix /waracle for all end points. Ex: localhost:<port>/waracle/<e
         "description": "BlueBerry Cake is made of Blueberries",
         "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
       }
+   
+   * /cakes(Post Request): This request is used to store new cakes. Cakes list details should be provided in Request body.
       
+       Ex: http://localhost:8083/waracle/cakes
+   
+      Request Body
+      -----------
+     [ {
+        "title": "BlueBerry Cake",
+        "description": "BlueBerry Cake is made of Blueberries",
+        "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
+      },
+       {
+        "title": "Choco Cake",
+        "description": "Choco Cake is made of Chocolate",
+        "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
+      }]
+   
 For all the above urls OAuth is disabled.
 * /oauth : GitHub OAuth functionality is added for this url. Page will be redirected to GitHub login page by requesting this url.
    
