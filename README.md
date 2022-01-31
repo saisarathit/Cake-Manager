@@ -44,3 +44,5 @@ Note: Please prefix /waracle for all end points. Ex: localhost:<port>/waracle/<e
       
 For all the above urls OAuth is disabled.
 * /oauth : GitHub OAuth functionality is added for this url. Page will be redirected to GitHub login page by requesting this url.
+   
+     * Ex:http://localhost:8083/waracle/oauth
