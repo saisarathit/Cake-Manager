@@ -48,16 +48,16 @@ Note: Please prefix /waracle for all end points. Ex: localhost:<port>/waracle/<e
    
          Request Body
          -----------
-        [ {
-           "title": "BlueBerry Cake",
-           "description": "BlueBerry Cake is made of Blueberries",
-           "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
-         },
-          {
-           "title": "Choco Cake",
-           "description": "Choco Cake is made of Chocolate",
-           "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
-         }]
+              [ {
+                 "title": "BlueBerry Cake",
+                 "description": "BlueBerry Cake is made of Blueberries",
+                 "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
+               },
+                {
+                 "title": "Choco Cake",
+                 "description": "Choco Cake is made of Chocolate",
+                 "image": "https://s3-eu-west-1.amazonaws.com/s3.mediafileserver.co.uk/carnation/WebFiles/RecipeImages/lemoncheesecake_lg.jpg"
+               }]
 
 For all the above urls OAuth is disabled.
 * /oauth : GitHub OAuth functionality is added for this url. Page will be redirected to GitHub login page by requesting this url.
