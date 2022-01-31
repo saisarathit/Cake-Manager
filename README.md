@@ -46,3 +46,14 @@ For all the above urls OAuth is disabled.
 * /oauth : GitHub OAuth functionality is added for this url. Page will be redirected to GitHub login page by requesting this url.
    
      * Ex:http://localhost:8083/waracle/oauth
+
+   
+ Docker:
+   * Dockerfile is available in project.
+   * Prerequisite: Docker should be installed to use this feature
+   * Docker image can be created using below command
+   
+        * docker build -t <image-name> <dockerfile-location> 
+   * Once Docker image is created successfully, it can be run using below command
+   
+        * docker run --name cakecontainer cake-manager : This command starts the application
