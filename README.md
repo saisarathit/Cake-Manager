@@ -21,14 +21,19 @@ Context path is configures as /waracle
 Note: Please prefix /waracle for all end points. Ex: localhost:<port>/waracle/<endpoints>
 
 * / (root url, Get request) : This request list out all cakes information available in current system.
+   
    -> Ex: http://localhost:8083/waracle/
 * /cakes(Get Request): This request downloads a file with list of cakes currently in the system as JSON data. This has optional query parameter to specify file name.
     * If no query parameter specified then file will be downloaded with default filename as cakes.json
+   
       --> Ex: http://localhost:8083/waracle/cakes
     * If file name is provided then file will be downloaded with given name
+   
       Ex: http://localhost:8083/waracle/cakes?fileName=cakesList.json
-* /cakes(Post Request): This request is used to store new cakes. Cake details should be provided in Request body
-    * http://localhost:8083/waracle/cakes 
+* /cakes(Post Request): This request is used to store new cakes. Cake details should be provided in Request body.
+   
+    Ex: http://localhost:8083/waracle/cakes 
+   
       Request Body
       -----------
       {
